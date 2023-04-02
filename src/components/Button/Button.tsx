@@ -1,4 +1,5 @@
 import React, {type ReactNode} from "react"
+import "./Button.css"
 
 interface ButtonProps {
   label: string;
@@ -8,7 +9,7 @@ interface ButtonProps {
 const Button = ({children, label}:ButtonProps) => {
   return (
     <button>
-      {children}
+      {children ? children : label}
     </button>
   )
 }
